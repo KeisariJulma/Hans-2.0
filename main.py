@@ -4,23 +4,31 @@ import random
 import sys
 from shutil import move
 from time import sleep
+from datetime import datetime
 from discord import __version__
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.ext.tasks import loop
 from dotenv import load_dotenv
 from os.path import join, dirname
-move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\')
+move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\'+'{:%Y-%m-%d-%H-%M}.log'.format(datetime.now()))
 from logger import logger
 from threading import Thread
-load_dotenv(join(dirname(__file__), '.env'))
-token = os.getenv('DISCORD_TOKEN')
 
 def get_prefix(bot, message):
     prefixes = [',']
     if not message.guild:
         return ','
     return commands.when_mentioned_or(*prefixes)(bot, message)
+
+load_dotenv(join(dirname(__file__), '.env'))
+token = os.getenv('DISCORD_TOKEN')
+bot = Bot(command_prefix=get_prefix)
+cogs = [
+    'cogs.basic',
+    'cogs.music.music'
+]
+
 
 @bot.event
 async def on_ready():
@@ -41,11 +49,6 @@ def restart():
     os.execv(sys.executable, ['python'] + sys.argv)
 
 def main():
-    bot = Bot(command_prefix=get_prefix)
-    cogs = [
-        'cogs.basic',
-        'cogs.music.music'
-    ]
     for cog in cogs:
         bot.load_extension(cog)
     t = Thread(target = restart)
