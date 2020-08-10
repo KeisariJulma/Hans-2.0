@@ -11,9 +11,10 @@ from discord.ext.commands import Bot
 from discord.ext.tasks import loop
 from dotenv import load_dotenv
 from os.path import join, dirname
+from threading import Thread
+
 move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\'+'{:%Y-%m-%d-%H-%M}.log'.format(datetime.now()))
 from logger import logger
-from threading import Thread
 
 def get_prefix(bot, message):
     prefixes = [',']
