@@ -1,0 +1,11 @@
+2020-08-13 18:43:48,701:INFO:discord: Loaded Basic
+2020-08-13 18:43:49,022:INFO:discord: Loaded Music
+2020-08-13 18:43:49,022:INFO:discord.client: logging in using static token
+2020-08-13 18:43:50,215:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-08-13 18:43:50,439:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-f2bb",{"micros":39874,"calls":["discord-sessions-prd-2-49",{"micros":38851,"calls":["start_session",{"micros":32417,"calls":["api-prd-main-slhp",{"micros":29767,"calls":["get_user",{"micros":2521},"add_authorized_ip",{"micros":1654},"get_guilds",{"micros":1349},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":3,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] (Session ID: 60f59fc0011969ef6a34eb7d5ca9809c).
+2020-08-13 18:43:52,463:INFO:discord: Logged in as: Hans - 472197742001782784 Version: 1.4.1
+2020-08-13 18:44:55,029:INFO:discord.client: Received signal to terminate bot and event loop.
+2020-08-13 18:44:55,029:INFO:discord.client: Cleaning up tasks.
+2020-08-13 18:44:55,029:INFO:discord.client: Cleaning up after 2 tasks.
+2020-08-13 18:44:55,095:INFO:discord.client: All tasks finished cancelling.
+2020-08-13 18:44:55,095:INFO:discord.client: Closing the event loop.

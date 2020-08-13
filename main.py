@@ -2,6 +2,7 @@
 import os
 import random
 import sys
+import discord
 from shutil import move
 from time import sleep
 from datetime import datetime
@@ -27,7 +28,7 @@ token = os.getenv('DISCORD_TOKEN')
 bot = Bot(command_prefix=get_prefix)
 cogs = [
     'cogs.basic',
-    'cogs.music.music'
+    'cogs.Music.music'
 ]
 
 

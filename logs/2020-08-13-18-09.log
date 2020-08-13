@@ -1,0 +1,6 @@
+2020-08-13 18:06:50,827:INFO:discord: Loaded Basic
+2020-08-13 18:06:51,328:INFO:discord: Loaded Music
+2020-08-13 18:06:51,341:INFO:discord.client: logging in using static token
+2020-08-13 18:06:52,356:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-08-13 18:06:52,640:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-jljb",{"micros":71692,"calls":["discord-sessions-prd-2-25",{"micros":60093,"calls":["start_session",{"micros":46304,"calls":["api-prd-main-0rkd",{"micros":43306,"calls":["get_user",{"micros":4749},"add_authorized_ip",{"micros":1613},"get_guilds",{"micros":5922},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":10413,"calls":[]}]}]}] (Session ID: 9c66f2af753afe807735d8c57d1d76b6).
+2020-08-13 18:06:54,659:INFO:discord: Logged in as: Hans dev - 629609178998112276 Version: 1.4.1
