@@ -46,10 +46,9 @@ class Basic(commands.Cog):
 
     @commands.command()
     async def move(self, ctx: commands.Context, *, our_input: str):
-        print(ctx.message.author.id)
         client = discord.Client()
-        print(our_input)
         channel = client.get_channel(our_input)
+        print(channel)
         await ctx.message.author.move_to(channel)
 
 def setup(bot):

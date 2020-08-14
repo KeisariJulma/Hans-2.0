@@ -44,6 +44,13 @@ async def status_change():
     statusses = ["Little game of gas the jew", "Keep advancing and the Soviets will fall", "Tour de France the game", "Russian roulette on railway platform at Birkenau"]
     await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=random.choice(statusses)))
 
+@bot.command(pass_context=True)
+async def negotiate(ctx):
+    voice_channel = bot.get_channel('628461493104672768')
+    author = ctx.message.author
+    await bot.move_member(author, voice_channel)
+
+
 def restart():
     print('start')
     sleep(86400)
