@@ -13,8 +13,12 @@ from discord.ext.tasks import loop
 from dotenv import load_dotenv
 from os.path import join, dirname
 from threading import Thread
+try:
+    move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\'+'{:%Y-%m-%d-%H-%M}.log'.format(datetime.now()))
+except Exception:
+    os.mkdir('logs')
+    move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\'+'{:%Y-%m-%d-%H-%M}.log'.format(datetime.now()))
 
-move(join(os.getcwd(),'discord.log'), os.getcwd()+'\\logs\\'+'{:%Y-%m-%d-%H-%M}.log'.format(datetime.now()))
 from logger import logger
 
 def get_prefix(bot, message):
@@ -43,13 +47,6 @@ async def status_change():
     await bot.wait_until_ready()
     statusses = ["Little game of gas the jew", "Keep advancing and the Soviets will fall", "Tour de France the game", "Russian roulette on railway platform at Birkenau"]
     await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=random.choice(statusses)))
-
-@bot.command(pass_context=True)
-async def negotiate(ctx):
-    voice_channel = bot.get_channel('628461493104672768')
-    author = ctx.message.author
-    await bot.move_member(author, voice_channel)
-
 
 def restart():
     print('start')

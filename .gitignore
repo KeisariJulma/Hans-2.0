@@ -1,3 +1,5 @@
 .env
 pyvenv.cfg
 __pycache__/
+discord.log
+logs/
