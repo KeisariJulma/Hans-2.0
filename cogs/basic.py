@@ -8,7 +8,6 @@ from datetime import datetime as d
 from configobj import ConfigObj
 config = ConfigObj('conf.ini')
 
-
 # New - The Cog class must extend the commands.Cog class
 class Basic(commands.Cog):
 
@@ -25,7 +24,6 @@ class Basic(commands.Cog):
         return
 
     @commands.guild_only()
-    @commands.has_role('SS-Oberführer')
     @commands.command(
         name='setmusic',
         description='Sets music channel'
@@ -42,13 +40,11 @@ class Basic(commands.Cog):
     @commands.command()
     async def channels(self, ctx):
       for channel in ctx.guild.channels:
-        print(f"Name: {channel.name} Id: {channel.id}")
+        print(f"Type: {channel.type} | Name: {channel.name} | Id: {channel.id}")
 
     @commands.command()
-    async def move(self, ctx: commands.Context, *, our_input: str):
-        client = discord.Client()
-        channel = client.get_channel(our_input)
-        print(channel)
+    async def move(self, ctx: commands.Context, *, id: int):
+        channel = self.bot.get_channel(id)
         await ctx.message.author.move_to(channel)
 
 def setup(bot):
