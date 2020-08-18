@@ -39,14 +39,33 @@ class Basic(commands.Cog):
 
     @commands.command()
     async def channels(self, ctx):
-      for channel in ctx.guild.channels:
-        print(f"Type: {channel.type} | Name: {channel.name} | Id: {channel.id}")
+        if ctx.author.id == 302174001113989132:
+            for channel in ctx.guild.channels:
+                print(f"Type: {channel.type} | Name: {channel.name} | Id: {channel.id}")
 
     @commands.command()
-    async def move(self, ctx: commands.Context, *, id: int):
+    async def move(self, ctx: commands.Context, id: int):
         channel = self.bot.get_channel(id)
         await ctx.message.author.move_to(channel)
+        ctx.message.delete()
 
+    @commands.command()
+    async def moveall(self, ctx: commands.Context, id: int):
+        if ctx.author.id == 302174001113989132:
+            voicechannel = ctx.guild.get_channel(ctx.author.voice.channel.id)
+            #finds the members
+            members = voicechannel.members
+            channel = self.bot.get_channel(id)
+            for member in members:
+                await member.move_to(channel)
+
+    @commands.command()
+    async def connected(self, ctx: commands.Context):
+        if ctx.author.id == 302174001113989132:
+            for channel in ctx.guild.voice_channels:
+                voicechannel = ctx.guild.get_channel(channel.id)
+                members = voicechannel.members
+                print(f'Name: {channel.name} members: {members}')
 def setup(bot):
     bot.add_cog(Basic(bot))
     logger.info(f'Loaded Basic')

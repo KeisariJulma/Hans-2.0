@@ -286,6 +286,14 @@ class Music(commands.Cog):
 
         return True
 
+    def get_music_channel(self, ctx: commands.Context):
+        try:
+            channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
+        except KeyError:
+            channel = self.bot.get_channel(ctx.channel.id)
+
+        return channel
+
     async def cog_before_invoke(self, ctx: commands.Context):
         ctx.voice_state = self.get_voice_state(ctx)
 
@@ -355,11 +363,7 @@ class Music(commands.Cog):
 
         if ctx.voice_state.is_playing and ctx.voice_state.voice.is_playing():
             ctx.voice_state.voice.pause()
-            ctx.voice_state.voice.resume()
-            try:
-                channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-            except KeyError:
-                channel = self.bot.get_channel(ctx.channel.id)
+            channel = self.get_music_channel(ctx)
             await channel.send(':pause_button:')
             del channel
             await ctx.message.delete()
@@ -370,10 +374,7 @@ class Music(commands.Cog):
 
         if ctx.voice_state.is_playing and ctx.voice_state.voice.is_paused():
             ctx.voice_state.voice.resume()
-            try:
-                channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-            except KeyError:
-                channel = self.bot.get_channel(ctx.channel.id)
+            channel = self.get_music_channel(ctx)
             await channel.send(':arrow_forward:')
             del channel
             await ctx.message.delete()
@@ -386,10 +387,7 @@ class Music(commands.Cog):
 
         if ctx.voice_state.is_playing:
             ctx.voice_state.voice.stop()
-            try:
-                channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-            except KeyError:
-                channel = self.bot.get_channel(ctx.channel.id)
+            channel = self.get_music_channel(ctx)
             await channel.send('⏹')
             del channel
             await ctx.message.delete()
@@ -402,10 +400,7 @@ class Music(commands.Cog):
             return await ctx.send('Not playing any music right now...')
 
         if ctx.voice_state.is_playing:
-            try:
-                channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-            except KeyError:
-                channel = self.bot.get_channel(ctx.channel.id)
+            channel = self.get_music_channel(ctx)
             await channel.send('⏭')
             del channel
             await ctx.message.delete()
@@ -442,10 +437,7 @@ class Music(commands.Cog):
             return await ctx.send('Empty queue.')
 
         ctx.voice_state.songs.shuffle()
-        try:
-            channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-        except KeyError:
-            channel = self.bot.get_channel(ctx.channel.id)
+        channel= self.get_music_channel(ctx)
         await channel.send(':twisted_rightwards_arrows:')
         del channel
         await ctx.message.delete()
@@ -458,10 +450,7 @@ class Music(commands.Cog):
             return await ctx.send('Empty queue.')
 
         ctx.voice_state.songs.remove(index - 1)
-        try:
-            channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-        except KeyError:
-            channel = self.bot.get_channel(ctx.channel.id)
+        channel=self.get_music_channel(ctx)
         await channel.send(':x:')
         del channel
         await ctx.message.delete()
@@ -477,10 +466,7 @@ class Music(commands.Cog):
 
         # Inverse boolean value to loop and unloop.
         ctx.voice_state.loop = not ctx.voice_state.loop
-        try:
-            channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-        except KeyError:
-            channel = self.bot.get_channel(ctx.channel.id)
+        channel = self.get_music_channel(ctx)
         await channel.send(':repeat:')
         del channel
         await ctx.message.delete()
@@ -504,12 +490,8 @@ class Music(commands.Cog):
                 logger.error('An error occurred while processing this request: {}'.format(str(e)))
             else:
                 song = Song(source)
-
                 await ctx.voice_state.songs.put(song)
-                try:
-                    channel = self.bot.get_channel(int(config[str(ctx.guild.id)]['music_channel']))
-                except KeyError:
-                    channel = self.bot.get_channel(ctx.channel.id)
+                channel = self.get_music_channel(ctx)
                 await channel.send('Enqueued {}'.format(str(source)))
                 del channel
             await ctx.message.delete()

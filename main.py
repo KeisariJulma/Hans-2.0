@@ -32,7 +32,8 @@ token = os.getenv('DISCORD_TOKEN')
 bot = Bot(command_prefix=get_prefix)
 cogs = [
     'cogs.basic',
-    'cogs.music.music'
+    'cogs.music.music',
+    'cogs.russian_roulette'
 ]
 
 
