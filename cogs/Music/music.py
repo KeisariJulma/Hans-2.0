@@ -16,12 +16,13 @@ youtube_dl.utils.bug_reports_message = lambda: ''
 
 
 class VoiceError(Exception):
+    logger.error(f'VoiceError {Exception}')
     pass
 
 
 class YTDLError(Exception):
+    logger.error(f'YTDLError {Exception}')
     pass
-
 
 class YTDLSource(discord.PCMVolumeTransformer):
     YTDL_OPTIONS = {

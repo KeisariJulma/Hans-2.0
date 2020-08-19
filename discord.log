@@ -1,57 +1,8 @@
-2020-08-17 16:08:58,656:INFO:discord: Loaded Basic
-2020-08-17 16:08:58,887:INFO:discord: Loaded Music
-2020-08-17 16:08:58,889:INFO:discord: Loaded russian roulette
-2020-08-17 16:08:58,890:INFO:discord.client: logging in using static token
-2020-08-17 16:08:59,907:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
-2020-08-17 16:09:00,272:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-hrj4",{"micros":132140,"calls":["discord-sessions-prd-2-1",{"micros":128985,"calls":["start_session",{"micros":123314,"calls":["api-prd-main-hzrt",{"micros":119491,"calls":["get_user",{"micros":14193},"add_authorized_ip",{"micros":7243},"get_guilds",{"micros":6380},"coros_wait",{"micros":2}]}]},"guilds_connect",{"micros":8,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] (Session ID: 019d4d611b9736d74ad352ff503eded9).
-2020-08-17 16:09:02,308:INFO:discord: Logged in as: Hans - 472197742001782784 Version: 1.4.1
-2020-08-17 16:41:14,510:INFO:discord.voice_client: Connecting to voice...
-2020-08-17 16:41:14,510:INFO:discord.voice_client: Starting voice handshake...
-2020-08-17 16:41:14,798:INFO:discord.voice_client: Voice handshake complete. Endpoint found eu-central4280.discord.media (IP: None)
-2020-08-17 16:41:15,526:INFO:discord.gateway: selected the voice protocol for use (xsalsa20_poly1305_lite)
-2020-08-17 16:41:15,661:INFO:discord.gateway: received secret key for voice connection
-2020-08-17 16:46:04,580:INFO:discord.player: Preparing to terminate ffmpeg process 11252.
-2020-08-17 16:46:04,580:INFO:discord.player: ffmpeg process 11252 successfully terminated with return code of 0.
-2020-08-17 16:49:05,359:INFO:discord.voice_client: The voice handshake is being terminated for Channel ID 519600530243452929 (Guild ID 458169255402274817)
-2020-08-17 16:49:05,359:INFO:discord.voice_client: The voice client has been removed for Channel ID 519600530243452929 (Guild ID 458169255402274817)
-2020-08-17 16:49:05,359:INFO:discord.voice_client: Disconnecting from voice normally, close code 1000.
-2020-08-17 17:09:42,149:INFO:discord.voice_client: Connecting to voice...
-2020-08-17 17:09:42,149:INFO:discord.voice_client: Starting voice handshake...
-2020-08-17 17:09:44,383:INFO:discord.voice_client: Voice handshake complete. Endpoint found eu-central235.discord.media (IP: None)
-2020-08-17 17:09:44,955:INFO:discord.gateway: selected the voice protocol for use (xsalsa20_poly1305_lite)
-2020-08-17 17:09:45,031:INFO:discord.gateway: received secret key for voice connection
-2020-08-17 17:12:47,804:INFO:discord.player: Preparing to terminate ffmpeg process 4256.
-2020-08-17 17:12:47,804:INFO:discord.player: ffmpeg process 4256 successfully terminated with return code of 0.
-2020-08-17 17:15:48,546:INFO:discord.player: Preparing to terminate ffmpeg process 9572.
-2020-08-17 17:15:48,546:INFO:discord.player: ffmpeg process 9572 successfully terminated with return code of 0.
-2020-08-17 17:18:49,836:INFO:discord.voice_client: The voice handshake is being terminated for Channel ID 238828696436342785 (Guild ID 238828696436342784)
-2020-08-17 17:18:49,836:INFO:discord.voice_client: The voice client has been removed for Channel ID 238828696436342785 (Guild ID 238828696436342784)
-2020-08-17 17:18:49,836:INFO:discord.voice_client: Disconnecting from voice normally, close code 1000.
-2020-08-17 17:47:33,362:WARNING:discord.gateway: Can't keep up, shard ID None websocket is 14.6s behind.
-2020-08-17 18:09:15,294:INFO:discord.client: Got a request to RESUME the websocket.
-2020-08-17 18:09:16,384:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-08-17 18:09:16,577:INFO:discord.gateway: Shard ID None has successfully RESUMED session 019d4d611b9736d74ad352ff503eded9 under trace ["gateway-prd-main-zlb4",{"micros":4553,"calls":["discord-sessions-prd-2-1",{"micros":26}]}].
-2020-08-17 18:12:03,779:INFO:discord.gateway: Websocket closed with 1006, attempting a reconnect.
-2020-08-17 18:12:03,780:INFO:discord.client: Got a request to RESUME the websocket.
-2020-08-17 18:12:05,686:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-08-17 18:12:05,887:INFO:discord.gateway: Shard ID None has successfully RESUMED session 019d4d611b9736d74ad352ff503eded9 under trace ["gateway-prd-main-1zgp",{"micros":2737,"calls":["discord-sessions-prd-2-1",{"micros":38}]}].
-2020-08-17 19:08:23,074:INFO:discord.client: Got a request to RESUME the websocket.
-2020-08-17 19:08:23,726:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-08-17 19:08:23,925:INFO:discord.gateway: Shard ID None has successfully RESUMED session 019d4d611b9736d74ad352ff503eded9 under trace ["gateway-prd-main-j239",{"micros":5368,"calls":["discord-sessions-prd-2-1",{"micros":30}]}].
-2020-08-17 19:48:51,059:INFO:discord.voice_client: Connecting to voice...
-2020-08-17 19:48:51,059:INFO:discord.voice_client: Starting voice handshake...
-2020-08-17 19:48:51,404:INFO:discord.voice_client: Voice handshake complete. Endpoint found russia413.discord.media (IP: None)
-2020-08-17 19:48:51,925:INFO:discord.gateway: selected the voice protocol for use (xsalsa20_poly1305_lite)
-2020-08-17 19:48:52,005:INFO:discord.gateway: received secret key for voice connection
-2020-08-17 19:49:05,109:INFO:discord.player: Preparing to terminate ffmpeg process 2716.
-2020-08-17 19:49:05,109:INFO:discord.player: ffmpeg process 2716 has not terminated. Waiting to terminate...
-2020-08-17 19:49:05,112:INFO:discord.player: ffmpeg process 2716 should have terminated with a return code of 1.
-2020-08-17 19:52:06,802:INFO:discord.voice_client: The voice handshake is being terminated for Channel ID 693718804571881493 (Guild ID 693718804144062504)
-2020-08-17 19:52:06,802:INFO:discord.voice_client: The voice client has been removed for Channel ID 693718804571881493 (Guild ID 693718804144062504)
-2020-08-17 19:52:06,802:INFO:discord.voice_client: Disconnecting from voice normally, close code 1000.
-2020-08-17 21:06:20,782:INFO:discord.client: Got a request to RESUME the websocket.
-2020-08-17 21:06:21,382:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-08-17 21:06:21,566:INFO:discord.gateway: Shard ID None has successfully RESUMED session 019d4d611b9736d74ad352ff503eded9 under trace ["gateway-prd-main-h3fn",{"micros":6977,"calls":["discord-sessions-prd-2-1",{"micros":16}]}].
-2020-08-17 22:56:19,131:INFO:discord.client: Got a request to RESUME the websocket.
-2020-08-17 22:56:19,816:INFO:discord.gateway: Shard ID None has sent the RESUME payload.
-2020-08-17 22:56:20,008:INFO:discord.gateway: Shard ID None has successfully RESUMED session 019d4d611b9736d74ad352ff503eded9 under trace ["gateway-prd-main-8c35",{"micros":3525,"calls":["discord-sessions-prd-2-1",{"micros":16}]}].
+2020-08-19 13:36:16,107:INFO:discord: Loaded Basic
+2020-08-19 13:36:16,820:ERROR:discord: VoiceError <class 'Exception'>
+2020-08-19 13:36:16,820:ERROR:discord: YTDLError <class 'Exception'>
+2020-08-19 13:36:16,843:INFO:discord: Loaded Music
+2020-08-19 13:36:16,847:INFO:discord: Loaded russian roulette
+2020-08-19 13:36:16,847:INFO:discord.client: logging in using static token
+2020-08-19 13:36:17,541:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-08-19 13:36:17,769:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-8c35",{"micros":72720,"calls":["discord-sessions-prd-2-30",{"micros":71108,"calls":["start_session",{"micros":51514,"calls":["api-prd-main-3w07",{"micros":48107,"calls":["get_user",{"micros":3003},"add_authorized_ip",{"micros":1394},"get_guilds",{"micros":5489},"coros_wait",{"micros":2}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":18140,"calls":[]}]}]}] (Session ID: e8c2a6f2da79ae0ce1cd10242f2489f0).
