@@ -1,8 +1,0 @@
-2020-08-19 13:36:16,107:INFO:discord: Loaded Basic
-2020-08-19 13:36:16,820:ERROR:discord: VoiceError <class 'Exception'>
-2020-08-19 13:36:16,820:ERROR:discord: YTDLError <class 'Exception'>
-2020-08-19 13:36:16,843:INFO:discord: Loaded Music
-2020-08-19 13:36:16,847:INFO:discord: Loaded russian roulette
-2020-08-19 13:36:16,847:INFO:discord.client: logging in using static token
-2020-08-19 13:36:17,541:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
-2020-08-19 13:36:17,769:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-8c35",{"micros":72720,"calls":["discord-sessions-prd-2-30",{"micros":71108,"calls":["start_session",{"micros":51514,"calls":["api-prd-main-3w07",{"micros":48107,"calls":["get_user",{"micros":3003},"add_authorized_ip",{"micros":1394},"get_guilds",{"micros":5489},"coros_wait",{"micros":2}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":18140,"calls":[]}]}]}] (Session ID: e8c2a6f2da79ae0ce1cd10242f2489f0).

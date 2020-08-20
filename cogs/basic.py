@@ -41,7 +41,7 @@ class Basic(commands.Cog):
     async def channels(self, ctx):
         if ctx.author.id == 302174001113989132:
             for channel in ctx.guild.channels:
-                print(f"Type: {channel.type} | Name: {channel.name} | Id: {channel.id}")
+                print(f'Type: {channel.type} | Name: {channel.name} | Id: {channel.id}')
 
     @commands.command()
     async def move(self, ctx: commands.Context, id: int):

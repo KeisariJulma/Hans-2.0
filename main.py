@@ -33,7 +33,8 @@ bot = Bot(command_prefix=get_prefix)
 cogs = [
     'cogs.basic',
     'cogs.music.music',
-    'cogs.russian_roulette'
+    'cogs.russian_roulette',
+    'cogs.teams'
 ]
 
 
