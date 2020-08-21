@@ -1,0 +1,10 @@
+2020-08-21 08:14:08,169:INFO:discord: Loaded Basic
+2020-08-21 08:14:09,123:ERROR:discord: VoiceError <class 'Exception'>
+2020-08-21 08:14:09,123:ERROR:discord: YTDLError <class 'Exception'>
+2020-08-21 08:14:09,151:INFO:discord: Loaded Music
+2020-08-21 08:14:09,153:INFO:discord: Loaded russian roulette
+2020-08-21 08:14:09,160:INFO:discord: Loaded Teams
+2020-08-21 08:14:09,161:INFO:discord.client: logging in using static token
+2020-08-21 08:14:09,667:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2020-08-21 08:14:09,862:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-qpjv",{"micros":60438,"calls":["discord-sessions-prd-2-17",{"micros":49967,"calls":["start_session",{"micros":27181,"calls":["api-prd-main-hctw",{"micros":24963,"calls":["get_user",{"micros":2349},"add_authorized_ip",{"micros":1217},"get_guilds",{"micros":1239},"coros_wait",{"micros":0}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":22024,"calls":[]}]}]}] (Session ID: 69cabaa1ebf0285d6857666295d0f138).
+2020-08-21 08:14:11,886:INFO:discord: Logged in as: Hans dev - 629609178998112276 Version: 1.4.1

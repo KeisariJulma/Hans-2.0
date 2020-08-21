@@ -13,7 +13,7 @@ class Teams(commands.Cog):
 
     @commands.command(name='join_team',aliases=[''])
     async def _join_team(self, ctx: commands.Context):
-        teamplayers.append(ctx.author.name)
+        teamplayers.append(ctx.author.id)
         await ctx.send(ctx.author.mention+' Joined team selection')
 
     @commands.command(name='teams')
@@ -31,15 +31,19 @@ class Teams(commands.Cog):
         i=0
         while len(list2) > number_of_teams:
             teams[i].append(teams[-1][-1])
-            i =+ 1
+            i += 1
             del teams[-1][-1]
             list2 = [x for x in teams if x != []]
-        del i
-        del number_of_teams
         del teams
         del peapol_in_teams
-        await ctx.send(list2)
-
+        i = 1
+        for teams in list2:
+            await ctx.send(f'{i}. Team')
+            i += 1
+            for peapol in teams:
+                peapol = ctx.guild.get_member(peapol)
+                await ctx.send(peapol.mention)
+        del number_of_teams
 def setup(bot):
     bot.add_cog(Teams(bot))
     logger.info(f'Loaded Teams')
